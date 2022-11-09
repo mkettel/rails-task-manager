@@ -1,7 +1,11 @@
 class TasksController < ApplicationController
+
   # homepage (display all of the tasks)
   def index
     @tasks = Task.all
+    if session[:user_id]
+      @user = User.find_by(id: session[:user_id])
+    end
   end
 # click on a link to go to a specific task page
   def show

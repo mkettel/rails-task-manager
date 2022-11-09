@@ -1,10 +1,17 @@
-<div class="container" style="text-align: center; max-width: 1100px; margin: 0px auto; font-size: 28px">
-  <h2 style="font-weight: 400">Status Quo</h2>
+
+<div class="user-message">
+  <% if @user %>
+    <h2>Hello: <%= @user.email %></h2>
+    <%= button_to 'Log out', logout_path, method: :delete, class: "main-page-button" %>
+  <% end %>
+</div>
+<div class="container-home">
+  <h2 style="font-weight: 400">TASKS</h2>
 </div>
 <div class="container-home">
   <div class="task-list">
     <ul style="list-style: none; font-size: 18px">
-        <h3 style="font-weight: 600">Tasks:</h3>
+        <%# <h3 style="font-weight: 600">Tasks:</h3> %>
       <% @tasks.each do |task| %>
         <%= link_to task_path(task), class: "task-link" do %>
             <% if task.completed == true %>
@@ -24,4 +31,8 @@
   <div class="add-task" style="text-align: start; margin-top: 40px; font-size: 20px">
     <%= link_to '+ Add a new task', new_task_path, class: "task-link" %>
   </div>
+</div>
+
+<div class="container">
+  <%= link_to 'Sign Up', new_user_path, class: "bottom-page-button" %>
 </div>

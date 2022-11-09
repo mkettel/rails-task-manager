@@ -15,7 +15,37 @@
  */
 body {
   font-family: 'Clash Display', sans-serif;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.navbar a {
+  font-size: 32px;
+  font-weight: 100;
+}
 
+.user-message {
+  text-align: center;
+}
+.user-message h2 {
+  font-size: 24px;
+}
+.main-page-button {
+  margin-top: 5px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 5px;
+  color: rgb(149, 148, 148);
+}
+.main-page-button:hover {
+  color: rgb(75, 74, 74);
+  transition: .3s;
+}
+.container-home h2 {
+  margin-top: 40px;
 }
  .container {
   text-align: center;
@@ -44,10 +74,60 @@ body {
 li {
   margin: 10px 0px;
 }
-label {
+ul label {
   color: white;
 }
 a {
   color: rgb(183, 183, 183);
   text-decoration: none;
+}
+
+
+/* user sign-in page*/
+.user-signup {
+  display: flex;
+  flex-direction: column;
+}
+.user-form {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 350px;
+  margin: 10px 15px;
+  padding: 20px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(80, 79, 79);
+  color: rgb(200, 200, 200);
+  box-shadow: 2px 2px 15px rgb(127, 125, 125);
+}
+.container-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#submit-button {
+  margin-top: 50px;
+}
+.input-label {
+  margin: 10px 0px;
+}
+.input-box {
+  border-radius: 7px;
+  border: 1px solid black;
+  background-color: rgba(227, 227, 227, 0.939);
+}
+.bottom-page-button {
+  margin-top: 5px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  border-radius: 2px;
+}
+.bottom-page-button:hover {
+  color: rgb(75, 74, 74);
+  transition: .3s;
 }
